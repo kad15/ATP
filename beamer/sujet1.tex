@@ -45,50 +45,40 @@
 
 \begin{frame}
   {Introduction}
-The rest of this paper is organized as follows. Section II
-presents the system model and problem formulation. In
-Section III, the lower bound of the file recovery probability
-is derived, based on which the optimization problem is
-reformulated. In Section IV, the proposed UAV trajectory
-designs are presented. Section V provides the numerical
-results, and finally we conclude the paper in Section VI.
-  Things in a Bulleted List\pause
+  L'article présente une optimisation de trajectoire d'un drône qui doit transmettre, disséminer, multicaster,
+  en un minimum de temps un fichier à des récepteurs terrestres via une communication sans fil.
 
-  \begin{enumerate}
-  \item Bullets that
-    \begin{enumerate}
-    \item one
-    \item two
-    \end{enumerate}\pause
-  \item Come up
-    \begin{enumerate}
-    \item one
-    \item \emph{two} and three
-    \end{enumerate}\pause
-  \item One by one
-    \begin{enumerate}
-    \item one
-    \item two
-    \end{enumerate}
-  \end{enumerate}
 \end{frame}
 
 
 \section{Modélisation du système et du problème}
-\subsection{Equations}
+%\subsection{Equations}
 
-\begin{frame}
-{Equations}
+\begin{frame}{Equations}
 
-Equations are easy
-\begin{itemize}
-	\item Just copy/paste equations\pause
-	\item From the paper!
-	\begin{equation*}
-	\textbf{p}^* = \underset{\textbf{p}}{\arg\!\min}~\sum_{\textbf{x}}\left[ I(\textbf{W}(\textbf{x};\textbf{p})) - T(\textbf{x}) \right]^2
-	\end{equation*}
-\end{itemize}
+ Things in a Bulleted List\pause
+
+\begin{enumerate}
+	\item Bullets that
+	\begin{enumerate}
+		\item one
+		\item two
+	\end{enumerate}\pause
+	\item Come up
+	\begin{enumerate}
+		\item one
+		\item \emph{two} and three
+	\end{enumerate}\pause
+	\item One by one
+	\begin{enumerate}
+		\item one
+		\item two
+	\end{enumerate}
+\end{enumerate}
 \end{frame}
+
+
+
 
 \section{Borne inférieure de la probabilité de bonne réception du fichier et reformulation du problème}
 
@@ -154,23 +144,42 @@ Equations are easy
   {Conclusion}
 
 \begin{bibunit}[plain]
-\begin{frame}
-  {Credits}
-This paper studied the trajectory design problem for a
-UAV-enabled multicasting system to minimize the mission
-completion time, while ensuring that each GT is able to
-successfully recover the file with a high target probability.
-We first converted the formulated optimization problem into
-a more tractable form based on the derived analytical lower
-bound of the successful file recovery probability, so that its
-complicated constraint for each GT is simplified to one on
-its minimum connection time with the UAV. We showed that
-the optimal UAV trajectory only needs to constitute connected
-line segments, which can be determined by finding the optimal
-set of waypoints and then the optimal speed over time along
-the path connecting the waypoints. We proposed two practical
-waypoints design schemes and applied the LP to find the
-optimal traveling speed given waypoints
+\begin{frame} {}
+
+Cet article a donc présenté une solution au problème de conception
+de trajectoire d'un drône équipés de système de communication sans fil
+en vu de transmettre un fichier à un ensemble de récepteurs i.e. Terminaux Terrestres. 
+La mission doit être accomplie en un temps minimum tout en assurant une bonne réception
+du message avec une probabilité minimale.
+
+
+ Pour ce faire, plusieurs étapes ont été nécessaires\pause
+
+\begin{enumerate}
+	\item Reformulation du problème en utilisant une seule contrainte
+	de temps minimum de connexion entre le drône et le terminal terrestre.
+	\pause
+	
+	\item Les auteurs ont ensuite montré que la trajectoire optimale
+	peut-être constituée uniquement de segments de droites reliant des
+	waypoints dont la position est optimisée.
+	\pause
+	\item Ils ont calculé la position optimale de ces waypoints.
+	Ce qui définit une trajectoire optimale. 
+	\pause  
+	\item Puis ils optimisent la vitesse en fonction du temps le long de la trajectoire obtenue
+	en utilisant la programmation linéaire(LP).
+	\pause
+	\item Les résultats numériques ont mis en évidence des performance significativement améliorés
+	 par rapport à divers autres techniques de conception de trajectoires.
+
+\end{enumerate}
+\end{frame}
+
+
+
+
+
   \begin{itemize}
  \item
   \end{itemize}
