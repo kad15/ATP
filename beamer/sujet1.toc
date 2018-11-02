@@ -1,6 +1,9 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {french}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Main Body}{7}{0}{2}
+\beamer@sectionintoc {2}{Mod\IeC {\'e}lisation du syst\IeC {\`e}me et du probl\IeC {\`e}me}{7}{0}{2}
 \beamer@subsectionintoc {2}{1}{Equations}{7}{0}{2}
-\beamer@sectionintoc {3}{Conclusion}{14}{0}{3}
+\beamer@sectionintoc {3}{Borne inf\IeC {\'e}rieure de la probabilit\IeC {\'e} de bonne r\IeC {\'e}ception du fichier et reformulation du probl\IeC {\`e}me}{9}{0}{3}
+\beamer@sectionintoc {4}{Proposition de conception de trajectoire}{11}{0}{4}
+\beamer@sectionintoc {5}{R\IeC {\'e}sultats num\IeC {\'e}riques}{12}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{16}{0}{6}
