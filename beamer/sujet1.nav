@@ -11,39 +11,51 @@
 \headcommand {\sectionentry {2}{Mod\IeC {\'e}lisation du syst\IeC {\`e}me et du probl\IeC {\`e}me}{4}{Mod\IeC {\'e}lisation du syst\IeC {\`e}me et du probl\IeC {\`e}me}{0}}
 \headcommand {\beamer@sectionpages {2}{3}}
 \headcommand {\beamer@subsectionpages {2}{3}}
-\headcommand {\slideentry {2}{0}{1}{4/7}{}{0}}
-\headcommand {\beamer@framepages {4}{7}}
-\headcommand {\sectionentry {3}{Borne inf\IeC {\'e}rieure de la probabilit\IeC {\'e} de bonne r\IeC {\'e}ception du fichier et reformulation du probl\IeC {\`e}me}{8}{Borne inf\IeC {\'e}rieure de la probabilit\IeC {\'e} de bonne r\IeC {\'e}ception du fichier et reformulation du probl\IeC {\`e}me}{0}}
-\headcommand {\beamer@sectionpages {4}{7}}
-\headcommand {\beamer@subsectionpages {4}{7}}
-\headcommand {\slideentry {3}{0}{1}{8/9}{}{0}}
-\headcommand {\beamer@framepages {8}{9}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{4}{Random Linear Network Coding : RLNC}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\slideentry {2}{1}{1}{4/4}{Random Linear Network Coding : RLNC}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{Mod\IeC {\'e}lisation du canal}}\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\slideentry {2}{2}{1}{5/5}{Mod\IeC {\'e}lisation du canal}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{6}{Mod\IeC {\'e}lisation du probl\IeC {\`e}me}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {2}{3}{1}{6/6}{Mod\IeC {\'e}lisation du probl\IeC {\`e}me}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\sectionentry {3}{Reformulation du probl\IeC {\`e}me}{7}{Reformulation du probl\IeC {\`e}me}{0}}
+\headcommand {\beamer@sectionpages {4}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{7}{Borne inf\IeC {\'e}rieure de la probabilit\IeC {\'e} de bonne r\IeC {\'e}ception $P_{k,succ}$}}\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\slideentry {3}{1}{1}{7/8}{Borne inf\IeC {\'e}rieure de la probabilit\IeC {\'e} de bonne r\IeC {\'e}ception $P_{k,succ}$}{0}}
+\headcommand {\beamer@framepages {7}{8}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{9}{Le probl\IeC {\`e}me reformul\IeC {\'e}}}\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\slideentry {3}{2}{1}{9/9}{Le probl\IeC {\`e}me reformul\IeC {\'e}}{0}}
+\headcommand {\beamer@framepages {9}{9}}
 \headcommand {\sectionentry {4}{Proposition de conception de trajectoire}{10}{Proposition de conception de trajectoire}{0}}
-\headcommand {\beamer@sectionpages {8}{9}}
-\headcommand {\beamer@subsectionpages {8}{9}}
-\headcommand {\slideentry {4}{0}{1}{10/10}{}{0}}
+\headcommand {\beamer@sectionpages {7}{9}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{10}{Conception des waypoints}}\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\slideentry {4}{1}{1}{10/10}{Conception des waypoints}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\sectionentry {5}{R\IeC {\'e}sultats num\IeC {\'e}riques}{11}{R\IeC {\'e}sultats num\IeC {\'e}riques}{0}}
-\headcommand {\beamer@sectionpages {10}{10}}
-\headcommand {\beamer@subsectionpages {10}{10}}
-\headcommand {\slideentry {5}{0}{1}{11/14}{}{0}}
-\headcommand {\beamer@framepages {11}{14}}
-\headcommand {\sectionentry {6}{Conclusion}{15}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {11}{14}}
-\headcommand {\beamer@subsectionpages {11}{14}}
-\headcommand {\slideentry {6}{0}{1}{15/15}{}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {6}{0}{2}{16/22}{}{0}}
-\headcommand {\beamer@framepages {16}{22}}
-\headcommand {\sectionentry {7}{Perspectives}{23}{Perspectives}{0}}
-\headcommand {\beamer@sectionpages {15}{22}}
-\headcommand {\beamer@subsectionpages {15}{22}}
-\headcommand {\slideentry {7}{0}{1}{23/23}{}{0}}
-\headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {7}{0}{2}{24/24}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{11}{Optimisation de la vitesse du drone}}\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\slideentry {4}{2}{1}{11/11}{Optimisation de la vitesse du drone}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\sectionentry {5}{R\IeC {\'e}sultats num\IeC {\'e}riques}{12}{R\IeC {\'e}sultats num\IeC {\'e}riques}{0}}
+\headcommand {\beamer@sectionpages {10}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {5}{0}{1}{12/15}{}{0}}
+\headcommand {\beamer@framepages {12}{15}}
+\headcommand {\sectionentry {6}{Conclusion}{16}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {12}{15}}
+\headcommand {\beamer@subsectionpages {12}{15}}
+\headcommand {\slideentry {6}{0}{1}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {6}{0}{2}{17/23}{}{0}}
+\headcommand {\beamer@framepages {17}{23}}
+\headcommand {\slideentry {6}{0}{3}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {6}{0}{4}{25/25}{}{0}}
+\headcommand {\beamer@framepages {25}{25}}
 \headcommand {\beamer@partpages {1}{25}}
-\headcommand {\beamer@subsectionpages {23}{25}}
-\headcommand {\beamer@sectionpages {23}{25}}
+\headcommand {\beamer@subsectionpages {16}{25}}
+\headcommand {\beamer@sectionpages {16}{25}}
 \headcommand {\beamer@documentpages {25}}
-\headcommand {\def \inserttotalframenumber {11}}
+\headcommand {\def \inserttotalframenumber {15}}
