@@ -55,7 +55,7 @@
       \end{aligned}
     \end{equation}
     
-** Simplification de \( P_{k, succ} \)
+** Minoration de \( P_{k, succ} \)
    Dépendance complexe de \( P_{k, succ} \) en fonction de \(
    \mathbf{q} \) (la probabilité de réception diminue avec la distance
    augmentant) donc utilisation d'un minorant \( P_{k, lb} \) tel que
@@ -78,6 +78,37 @@
    La contrainte devient donc
    \begin{equation}
      \forall k, P_{k, \text{lb}} \geq \bar{P}
+   \end{equation}
+   
+** Changement de variable
+   On souhaite expliciter la dépendance en temps de \( P_{k, lb} \).
+   On remarque que \( \hat{N}_k \) peut s'approximer à une variable
+   aléatoire gaussienne de moyenne et écart type ne dépendant que de
+   \( | \mathcal{M}_{k,D} |, L \) et \( p_D \).  On obtient donc
+   \[ P_{k, lb} = \mathbb{P}(\hat{N}_k \geq N') \approx Q\left(f(N', |
+   \mathcal{M}_{k, D} |, L, p_D)\right) \]
+   où \( Q \colon x \mapsto \int_x^{\infty} e^{-u^2 / 2} \,
+   \mathrm{d}u \) est le résidu gaussien et \( f \) une fonction
+   connue (non citée car inutile).
+   
+   En transformant \( P_{k, lb} \geq \bar{P} \) en utilisant les
+   approximations faites, on peut écrire
+   \begin{equation}
+     | \mathcal{M}_{k,D} | \geq M_{\text{min}}
+   \end{equation}
+   avec \( M_{\text{min}} \) connu dépendant de \( L \), \( p_D \), \(
+   N' \) et \( Q^{-1}(\bar{P}) \).
+
+   On obtient finalement
+   \begin{equation}\tag{P3}
+     \begin{aligned}
+                    & \min_{q[m]_{m = 1}^M, M} T = \delta_t M \\
+       \text{s.t. } & \forall k \in \mathcal{K},
+                      | \mathcal{M}_{k, D} | \geq
+                      M_{\text{min}} \\
+                    & \forall m \in \llbracket 2, M \rrbracket,
+                      \| q[m] - q[m - 1] \leq \tilde{V}_\text{max}
+     \end{aligned}
    \end{equation}
 * Méthode
 
