@@ -1,1 +1,4 @@
 atp.pdf
+auto/
+*.fdb_latexmk
+*.fls
