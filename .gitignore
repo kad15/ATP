@@ -77,3 +77,7 @@ Thumbs.db
 # additional beamer files
 *.nav
 *.snm
+/draft.tex
+/draft.pdf
+/auto/draft.el
+*~
