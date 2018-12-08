@@ -71,4 +71,34 @@ problème}
   \end{equation}
 \end{frame}
 
+\subsection{Minoration de la probabilité de succès}
+\begin{frame}{Minoration de \( P_{k, \text{succ}} \)}
+  \begin{alertblock}{Problème}
+    \( P_{k, \text{succ}} \) dépend de \( \mathbf{q} \)
+    \note[item]{probabilité de réception diminue quand la distance
+      augmente}
+  \end{alertblock}
+  \begin{block}{Distance caractéristique}
+    On introduit \( D \) tel que
+    \[ \| \mathbf{q}[m] - \mathbf{w}_{k} \| > D \implies
+      \text{réception impossible} \]
+  \end{block}
+\end{frame}
+\begin{frame}{Minoration}
+  \( \mathcal{M}_{k, D} = \{ m | \| \mathbf{q}[m] - \mathbf{w}_k \|
+  \leq D \} \)
+  \note[item]{\( \mathcal{M}_{k, D} \) ensemble des pas de temps
+    durant lesquels la transmission est réalisable}
+  \begin{block}{Minorant}
+    \( \hat{N}_k \sim \mathcal{B}(| \mathcal{M}_{k, D} | L, p_D)\) un
+    minorant du nombre de paquets reçus par terminal \( k \)
+    \note[item]{\( L \) nombre de paquets transmis par time slot}
+    \note[item]{\( p_D \) proba de réception d'un paquet à distance \(
+    D \)}
+    \begin{equation}
+      P_{k, \text{lb}} = \mathbb{P}(\hat{N}_k \geq N')
+    \end{equation}
+  \end{block}
+\end{frame}
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
