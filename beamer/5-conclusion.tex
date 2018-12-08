@@ -11,8 +11,13 @@ du message avec une probabilité minimale.
 
 \end{frame}
 
+
+%\newcounter{sauvegardeenumi}
+%\newcommand{\asuivre}{\setcounter{sauvegardeenumi}{\theenumi}}
+%\newcommand{\suite}{\setcounter{enumi}{\thesauvegardeenumi}}
 \begin{frame} {}
- Pour ce faire, plusieurs étapes ont été nécessaires\pause
+
+Pour ce faire, plusieurs étapes ont été nécessaires
 
 \begin{enumerate}
 	\item Reformulation du problème en utilisant une seule contrainte
@@ -22,7 +27,19 @@ du message avec une probabilité minimale.
 	peut-être constituée uniquement de segments de droites reliant des
 	waypoints dont la position est optimisée.\pause
 	\item Ils ont calculé la position optimale de ces waypoints.
-	Ce qui définit une trajectoire optimale. \pause  
+	Ce qui définit une trajectoire optimale. \pause 
+	\asuivre
+	
+\end{enumerate}
+\end{frame}	
+	
+\begin{frame} {}
+
+
+
+\begin{enumerate}	
+	
+	 \suite
 	\item Puis ils optimisent la vitesse en fonction du temps le long de la trajectoire obtenue
 	en utilisant la programmation linéaire(LP).\pause
 	\item Les résultats numériques ont mis en évidence des performances significativement améliorées
