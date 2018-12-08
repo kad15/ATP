@@ -74,4 +74,72 @@ problème}
   \end{equation}
 \end{frame}
 
+\subsection{Minoration de la probabilité de succès}
+\begin{frame}{Minoration de \( P_{k, \text{succ}} \)}
+  \begin{alertblock}{Problème}
+    \( P_{k, \text{succ}} \) dépend de \( \mathbf{q} \)
+    \note[item]{probabilité de réception diminue quand la distance
+      augmente}
+  \end{alertblock}
+  \begin{block}{Distance caractéristique}
+    On introduit \( D \) tel que
+    \[ \| \mathbf{q}[m] - \mathbf{w}_{k} \| > D \implies
+      \text{réception impossible} \]
+  \end{block}
+\end{frame}
+\begin{frame}{Minoration}
+  \( \mathcal{M}_{k, D} = \{ m | \| \mathbf{q}[m] - \mathbf{w}_k \|
+  \leq D \} \)
+  \note[item]{\( \mathcal{M}_{k, D} \) ensemble des pas de temps
+    durant lesquels la transmission est réalisable}
+  \begin{block}{Minorant}
+    \( \hat{N}_k \) un minorant du nombre de paquets reçus par
+    terminal \( k \)
+    \note[item]{\( \hat{N}_k \sim \mathcal{B}(| \mathcal{M}_{k, D} |
+      L, p_D)\)}
+    \note[item]{\( L \) nombre de paquets transmis par time slot}
+    \note[item]{\( p_D \) proba de réception d'un paquet à distance \(
+    D \)}
+    \begin{equation}
+      P_{k, \text{lb}} = \mathbb{P}(\hat{N}_k \geq N')
+    \end{equation}
+  \end{block}
+\end{frame}
+
+\subsection{De la probabilité au temps}
+\begin{frame}{De la probabilité au temps}
+  \begin{block}{Approximation}
+    \[ \hat{N}_k \approx \mathcal{G}(\mu, \sigma^2) \]
+    \( \mu, \sigma^2 \) dépendant de \( | \mathcal{M}_{k, D} |, L, p_D
+    \)
+  \end{block}
+  \begin{equation}
+    P_{k, \text{lb}} = \mathbb{P}(\hat{N}_k \geq N) \approx
+    Q\left(f(N', | \mathcal{M}_{k, D} |, L, p_D) \right)
+  \end{equation}
+  \note[item]{\( Q \colon x \mapsto \int_x^{\infty} e^{-u^2 / 2} \,
+    \mathrm{d}u \)}
+  \note[item]{\( f \) est une fonction connue}
+  \begin{block}{Expression en temps}
+    \begin{equation}
+      \label{eq:1}
+      | \mathcal{M}_{k, D} | \geq M_{\text{min}}
+    \end{equation}
+    \( M_{\text{min}} \) connu dépendant de \( L, p_D, N' \) et \(
+    Q^{-1}(\bar{P}) \)
+  \end{block}
+\end{frame}
+\begin{frame}{Modélisation finale}
+  \begin{equation}\tag{P3}
+    \label{eq:2}
+    \begin{aligned}
+      & \min_{q[m]_{m=1}^M, M} T = \delta_t M \\
+      \text{s.t. } & \forall k \in \mathcal{K},
+      | \mathcal{M}_{k, D} | \geq M_{\text{min}} \\
+      & \forall m \in \llbracket 2, M \rrbracket,
+      \| q[m] - q[m - 1] \| \leq \tilde{V}_{\text{max}}
+    \end{aligned}
+  \end{equation}
+\end{frame}
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
