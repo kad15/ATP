@@ -1,4 +1,4 @@
-SLIDES  := sujet1
+SLIDES  := atp
 #HANDOUT := demo-handout
 
 all: slides handout
