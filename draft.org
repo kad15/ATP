@@ -54,6 +54,31 @@
                     \tilde{V}_{max}
       \end{aligned}
     \end{equation}
+    
+** Simplification de \( P_{k, succ} \)
+   Dépendance complexe de \( P_{k, succ} \) en fonction de \(
+   \mathbf{q} \) (la probabilité de réception diminue avec la distance
+   augmentant) donc utilisation d'un minorant \( P_{k, lb} \) tel que
+   \[ P_{k, succ} \geq \bar{P} \longrightarrow P_{k, lb} \geq \bar{P} \]
+   
+   Pour ce faire, introduction d'une constante \( D \) telle que \( \|
+   \mathbf{q}[m] - w_k \| > D \implies \) réception trop incertaine.
+   pour être considérée.
+   
+   En introduisant \( \mathcal{M}_{k, D} \) l'ensemble des time slots
+   tels que la distance de l'UAV à la station \( k \) est inférieure à
+   \( D \), on obtient
+   \begin{equation}
+     P_{k, lb} = \mathbb{P}(\hat{N}_k \geq N')
+   \end{equation}
+   où \( \hat{N}_k \sim \mathcal{B}(|\mathcal{M}_{k, D}|L, p_D) \)
+   où \( p_D \) est la probabilité de recevoir correctement un paquet
+   transmis à la distance \( D \)
+   
+   La contrainte devient donc
+   \begin{equation}
+     \forall k, P_{k, \text{lb}} \geq \bar{P}
+   \end{equation}
 * Méthode
 
 * Résultats
