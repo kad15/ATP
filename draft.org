@@ -1,0 +1,61 @@
+#+TITLE:Trajectory optimisation for completion time minimization in UAV-enabled multicasting
+#+AUTHOR: Bedjilali, Hondet, Viry
+#+LATEX_HEADER:\usepackage{stmaryrd}
+
+* Introduction
+** Objectif
+   Délivrer un fichier à \( N \) terminaux en un temps minimal.
+
+* Modèle
+** Formulation initiale
+   + Minimiser le temps d'exécution de la mission
+   + sous contraintes
+     + \( \forall k \in \mathcal{K} \) probabilité de réception
+       correcte \( P_{k, succ} \geq \bar{P} \)
+     + UAV ayant une vitesse max \( V_{max} \)
+
+** Temps et position
+   Temps discrétisé de manière régulière, \( M \) time slots durant \(
+   \delta_t \) chacun.  Horizon de la mission \( T = M \delta_t \), d'où
+   \begin{equation}
+     \min \text{\it temps d'exécution de mission} \leftrightarrow \min M
+   \end{equation}
+   
+   Déplacement maximal par pas de temps \( \tilde{V}_{max} = \delta_t
+     V_{max} \)
+   
+   Position marquée par \( \mathbf{q} \) à chaque pas de temps donc
+   \[ \forall m \in [1, M] \cap \mathbb{N}, \mathbf{q}[m] \in
+   \mathbb{R}^2 \]
+  
+   \begin{equation}
+     \text{\it UAV restreint à } V_{max} \leftrightarrow 
+     \| q[m] - q[m - 1] \| \leq \tilde{V}_{max}
+   \end{equation}
+   
+** Réception des paquets
+   + \( N_k \) nombre de paquets recus par terminal \( k \)
+   + \( N' \) nombre de paquets à transmettre
+   + \( N \) nombre de paquets codes (RLNC) transmis
+   + \( L \) paquets transmis par time slot
+   \[ \text{\it proba de réception correcte} \leftrightarrow
+   \mathbb{P}(N_k \geq N') \]
+   avec \( N_k \sim \mathcal{P} \) vu que \( N_k = \sum_{m = 1}^M
+   \sum_{l = 1}^L Z_k[m, l] \) avec \( Z_k[m, l] \) suivant une loi de
+   Bernouilli indiquant si terminal \( k \) a reçu le paquet \( l \)
+   du time slot \( m \)
+   
+** Reformulation
+   \begin{equation}\tag{P1}
+     \begin{aligned}
+       &\min_{\mathbf{q}[m]_{m=1}^M} M \\
+       \text{s.t. } & \forall k, P_{k, \text{succ}} \geq \bar{P} \\
+                    & \forall m, \| \mathbf{q}[m] - q[m - 1] \| \leq
+                    \tilde{V}_{max}
+      \end{aligned}
+    \end{equation}
+* Méthode
+
+* Résultats
+
+* Conclusion
