@@ -1,27 +1,74 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Modélisation du système et du problème}
 
-\subsection{Random Linear Network Coding : RLNC}
-\begin{frame}{Liste des paramètres}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=\dimexpr11\textheight/16\relax]{param}
-	\caption{Parametres}
-\end{figure}
+\subsection[Modèle initial]{Formulation et modélisation initiale du
+problème}
+\begin{frame}{Formulation initiale}
+  \begin{itemize}
+  \item Minimiser le temps d'exécution de la mission
+  \item sous contraintes
+    \begin{itemize}
+    \item \( \forall k \in \mathcal{K}, P_{k, \text{succ}} \geq
+      \bar{P} \),
+      \note[item]{\( \mathcal{K} \) ensemble des terminaux \)}
+    \item vitesse max de l'UAV \( V_{\text{max}} \)
+    \end{itemize}
+  \end{itemize}
 \end{frame}
-
-
-\subsection{Modélisation du canal}
-\begin{frame}{Modélisation du canal}
-
-modélisation canal
+\begin{frame}{Modélisation temps et position}
+  \begin{block}{Discrétisation}
+    \[ T = M \delta_t \]
+    \note[item]{\( T \) horizon de la mission}
+    \note[item]{\( M \) pas de temps final}
+    \note[item]{\( \delta_t \) durée d'un pas de temps}
+    \begin{equation}
+      \min \text{\textit{temps d'exécution de la mission}}
+      \longleftrightarrow \min_M M
+    \end{equation}
+  \end{block}
+  \begin{block}{Position et vitesse}
+    \begin{itemize}
+    \item Position \( \mathbf{q}[m]_{m = 1}^M \in \mathbb{R}^{2 \times
+      M} \)
+    \item Déplacement maximal \( \tilde{V}_{\text{max}} = \delta_t
+      V_{\text{max}} \)
+    \end{itemize}
+    \begin{equation}
+      \text{\textit{UAV restreint à}} V_{\text{max}} \longleftrightarrow
+      \forall m, \| q[m] - q[m - 1] \leq \tilde{V}_{\text{max}} \|
+    \end{equation}
+  \end{block}
 \end{frame}
-
-\subsection{Modélisation du problème}
-\begin{frame}{Modélisation du problème}
-
-modélisation UAV
+\begin{frame}{Réception des paquets}
+  \begin{itemize}
+  \item \( N_k \) nombre de paquets reçus par terminal \( k \)
+  \item \( N' \) nombre de paquets nécessaire
+  \item \( N \) nombre de paquets codés transmis
+    \note[item]{\( N \) donné par RLNC}
+  \end{itemize}
+  \begin{block}{Qualité de transmission}
+    \begin{equation}
+      \text{\textit{probabilité de réception correcte}} \longleftrightarrow
+      \mathbb{P}(N_k \geq N')
+    \end{equation}
+    \note[item]{
+      avec \( N_k \sim \mathcal{P} \) vu que \( N_k = \sum_{m = 1}^M
+      \sum_{l = 1}^L Z_k[m, l] \) avec \( Z_k[m, l] \) suivant une loi de
+      Bernouilli indiquant si terminal \( k \) a reçu le paquet \( l \) du
+      time slot \( m \)
+    }
+  \end{block}
+\end{frame}
+\begin{frame}{Modélisation initiale}
+  \begin{equation}\tag{P1}
+    \begin{aligned}
+      & \min_{q[m]_{m=1}^M, M} M \\
+      \text{s.t. } & \forall k \in \mathcal{K}, P_{k, \text{succ}}
+      \geq \bar{P} \\
+      & \forall m \in \llbracket 1, M \rrbracket, \| q[m] - q[m - 1]
+      \| \leq \tilde{V}_{\text{max}}
+    \end{aligned}
+  \end{equation}
 \end{frame}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
