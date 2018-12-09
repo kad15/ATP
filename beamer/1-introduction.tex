@@ -3,9 +3,16 @@
 \section {Introduction}
 
 \begin{frame}{Application des drones aux télécommunications}
-  Les drones trouvent de nombreuses utilisations tant ludiques que professionnelles. Cet article présente une application dans le domaine des télécommunications où le drone permettrait d'améliorer la qualité de service (QoS) ou de rétablir des communications après une catastrophe naturelle. 
- 
- 
+\begin{itemize}
+\item Les drones trouvent de nombreuses utilisations tant ludiques que professionnelles. 
+\item Cet article présente une application dans le domaine des télécommunications dans le cas particulier où le drone vole à faible hauteur, typiquement 100m.
+\item La mobilité des drones peut permettre d'améliorer les performances qui seraient obtenues pas un système
+utilisant des relais ou des stations de base terrestres.
+\item Exemple : récolte d'informations énergétiquement efficace dans un contexte IoT du fait de la proximité du drone.
+\item Dans ce type d'utilisation, les performances du système dépend fortement des trajectoires du drone qu'il s'agit d'optimiser.
+\end{itemize}
+  
+
 \end{frame}
 
 \begin{frame}{Contexte de l'article}
@@ -33,7 +40,8 @@
  			\begin{itemize}
  				\item  Dans le "European Journal of Operational Research"
  				\item  Dans le "Journal of Algorithms"
- 				\item  ou par "Cambridge Univ. Press" (convex optimisation)
+ 				\item  ou par "Cambridge Univ. Press" (convex optimisation), l'article référence un manuel
+ 				en optimisation convex, téléchargeable gratuitement et associé à un MOOC de Stanford University.
  			\end{itemize}
 	\end{itemize}
 
@@ -43,7 +51,7 @@
  
 \begin{frame}{Dissémination multicast sans fil}
 
-Le présent article étudie un drone déployé en vue de disséminer vers des Terminaux Terrestres (GT) un message via une connexion sans fil. On parle de multicast, et non de broadcast, car à un instant donné seule une partie des GT est à portée du drone.
+Le présent article étudie un drone déployé en vue de disséminer vers des Terminaux Terrestres (GT : Ground terminals) un message (e.g. 2 Mbits) via une connexion sans fil. On parle de multicast, et non de broadcast, car à un instant donné seule une partie des GT est à portée du drone.
 
 \begin{figure}
 	\centering
