@@ -129,7 +129,7 @@
     Q^{-1}(\bar{P}) \)
   \end{block}
 \end{frame}
-\begin{frame}{Modélisation finale}
+\begin{frame}{C'est bientôt la fin}
   \begin{equation}\tag{P3}
     \label{eq:2}
     \begin{aligned}
@@ -142,4 +142,39 @@
   \end{equation}
 \end{frame}
 
+\subsection{Trajectoire explicitée}
+\begin{frame}{Re modélisation de la trajectoire}
+  \begin{block}{Relaxation du TSP}
+    Regroupement des terminaux en \( \mathcal{S}_g \)
+    \note[item]{\( \mathcal{S}_g \) zone de rayon \( D \) regroupant
+      plusieurs terminaux}
+    \note[item]{Zones \( \mathcal{S}_{g} \) données par un algo non
+      exposé ici}
+    \note[item]{Pour couvrir tous les terminaux de la zone \(
+      \mathcal{S}_g \), il suffit de passer dans la zone}
+  \end{block}
+  \begin{align}
+    & \min_{
+        {\{\mathbf{s}_g, \mathbf{f}_g\}}_{g=1}^G
+      }
+      \underbrace{
+      \sum_{g = 1}^G \max \left\{
+      \frac{
+      \| \mathbf{f}_g - \mathbf{s}_g
+      }{
+      V_{\text{max}}
+      }, T_{\text{min}}
+      \right\}
+      }_{\text{traversée}} +
+      \underbrace{
+      \sum_{g = 1}^G
+      \frac{
+      \| \mathbf{s}_{g + 1} - \mathbf{f}_g \|
+      }{
+      V_{\text{max}}
+      }
+      }_{\text{transition}} \\
+    \text{s.t } & \forall g, (\mathbf{s}_g, \mathbf{f}_g) \in \mathcal{C}_g
+  \end{align}
+\end{frame}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
