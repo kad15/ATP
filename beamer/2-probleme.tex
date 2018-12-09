@@ -1,4 +1,3 @@
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Modélisation du système et du problème}
 
 \subsection[Modèle initial]{Formulation et modélisation initiale du problème}
@@ -153,7 +152,7 @@
     \note[item]{Pour couvrir tous les terminaux de la zone \(
       \mathcal{S}_g \), il suffit de passer dans la zone}
   \end{block}
-  \begin{align}\tag{P4}
+  \begin{align}
     & \min_{
         {\{\mathbf{s}_g, \mathbf{f}_g\}}_{g=1}^G
       }
@@ -173,8 +172,34 @@
       }{
       V_{\text{max}}
       }
-      }_{\text{transition}} \\
+      }_{\text{transition}} \tag{P4} \\
     \text{s.t } & \forall g, (\mathbf{s}_g, \mathbf{f}_g) \in \mathcal{C}_g
   \end{align}
 \end{frame}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\subsection{Optimisation de la vitesse}
+\begin{frame}{Optimisation de la vitesse}
+  \begin{block}{Variable de décision}
+    \begin{itemize}
+    \item Discrétisation en espace, \( \delta_t \rightsquigarrow
+      \delta_d \)
+    \item Manipulation du temps, \( \mathbf{q}[m] \rightsquigarrow
+      \tau_j \)
+    \end{itemize}
+  \end{block}
+  \begin{align}
+    & \min_{\{\tau_j\}_{j = 1}^J} \sum_{j = 1}^J \tau_j \tag{P5} \\
+    \text{s.t. } & \forall k \in \mathcal{K}, \sum_{j = 1}^J I_{kj}
+                   \tau_j \geq T_{\text{min}} \\
+    & \forall j \in \llbracket 1, J \rrbracket,
+      \tau_j \geq \frac{\delta_d}{V_{\text{max}}}
+  \end{align}
+  \note[item]{Discrétisation en espace donne \( \{\mathbf{q}_j\}_{j =
+  1}^J \) ensemble de positions à chaque pas de déplacement}
+  \note[item]{Avec \( I_{kj} = 1 \) si UAV en connexion avec terminal
+    \( k \) quand en \( j \)\textsuperscript{ième} position}
+\end{frame}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "atp"
+%%% End:
