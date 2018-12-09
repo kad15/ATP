@@ -62,15 +62,13 @@
   \end{block}
 \end{frame}
 \begin{frame}{Modélisation initiale}
-  \begin{equation}\tag{P1}
-    \begin{aligned}
-      & \min_{q[m]_{m=1}^M, M} M \\
+  \begin{align}
+      & \min_{q[m]_{m=1}^M, M} M \tag{P1} \label{eq:init-obj} \\
       \text{s.t. } & \forall k \in \mathcal{K}, P_{k, \text{succ}}
-      \geq \bar{P} \\
+      \geq \bar{P} \label{eq:init-prec} \\
       & \forall m \in \llbracket 1, M \rrbracket, \| q[m] - q[m - 1]
       \| \leq \tilde{V}_{\text{max}}
-    \end{aligned}
-  \end{equation}
+  \end{align}
 \end{frame}
 
 \subsection{Minoration de la probabilité de succès}
@@ -120,8 +118,7 @@
     \mathrm{d}u \)}
   \note[item]{\( f \) est une fonction connue}
   \begin{block}{Expression en temps}
-    \begin{equation}
-      \label{eq:1}
+    \begin{equation}\label{eq:1}
       | \mathcal{M}_{k, D} | \geq M_{\text{min}}
     \end{equation}
     \( M_{\text{min}} \) connu dépendant de \( L, p_D, N' \) et \(
@@ -129,16 +126,14 @@
   \end{block}
 \end{frame}
 \begin{frame}{C'est bientôt la fin}
-  \begin{equation}\tag{P3}
+  \begin{align}
     \label{eq:2}
-    \begin{aligned}
-      & \min_{q[m]_{m=1}^M, M} T = \delta_t M \\
-      \text{s.t. } & \forall k \in \mathcal{K},
-      | \mathcal{M}_{k, D} | \geq M_{\text{min}} \\
-      & \forall m \in \llbracket 2, M \rrbracket,
+    & \min_{q[m]_{m=1}^M, M} T = \delta_t M \tag{P3} \\
+    \text{s.t. } & \forall k \in \mathcal{K},
+                   | \mathcal{M}_{k, D} | \geq M_{\text{min}} \\
+    & \forall m \in \llbracket 2, M \rrbracket,
       \| q[m] - q[m - 1] \| \leq \tilde{V}_{\text{max}}
-    \end{aligned}
-  \end{equation}
+  \end{align}
 \end{frame}
 
 \subsection{Trajectoire explicitée}
