@@ -50,15 +50,21 @@ utilisant des relais ou des stations de base terrestres.
 \end{frame}
  
 \begin{frame}{Dissémination multicast sans fil}
+\begin{itemize}
+	\item Drone  équipé d'un système de transmission  sans fil
+	\item K Terminaux terrestres
+	\item Objectif : envoi d'un message par paquets via communication sans fil : taille W = 2 Mbits par ex.  
+\end{itemize}
+%Le présent article étudie un drone déployé en vue de disséminer vers K Terminaux Terrestres (GT : Ground Terminals) un message (e.g. W = 2 Mbits) via une connexion sans fil. On parle de multicast, et non de broadcast, car à un instant donné seule une partie des terminaux (GT) est à portée du drone.
+%
+%\comment{GH:Ça fait beaucoup de texte non?  Je suggère de diminuer
+%  drastiquement le contenu, et de compter sur l'oral, quitte à mettre
+%  du contenu en note}
 
-Le présent article étudie un drone déployé en vue de disséminer vers K Terminaux Terrestres (GT : Ground Terminals) un message (e.g. W = 2 Mbits) via une connexion sans fil. On parle de multicast, et non de broadcast, car à un instant donné seule une partie des terminaux (GT) est à portée du drone.
 
-\comment{GH:Ça fait beaucoup de texte non?  Je suggère de diminuer
-  drastiquement le contenu, et de compter sur l'oral, quitte à mettre
-  du contenu en note}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/multicast}
+	\includegraphics[width=0.6\linewidth]{images/multicast}
 	\caption{}
 	\label{fig:multicast}
 \end{figure}
@@ -66,9 +72,15 @@ Le présent article étudie un drone déployé en vue de disséminer vers K Term
 \end{frame}
 
 \begin{frame}{Minimisation du temps de mission}
-Les auteurs cherchent à minimiser le temps de mission tout en assurant une réception du message par les GT avec une probabilité cible fixée à l'avance. Le tout sous la contrainte de vitesse maximale du drone. La probabilité de réception d'un GT est difficile à évaluer car c'est fonction compliquée de la trajectoire du drone. Pour contourner le problème, les auteurs reformulent le problème en introduisant un paramètre auxiliaire D (distance critique horizontale entre le drone et la GT). Au delà de cette distance D, le nombre de paquets perdus devient trop important car le temps de connexion devient insuffisant. 
+%Les auteurs cherchent à minimiser le temps de mission tout en assurant une réception du message par les GT avec une probabilité cible fixée à l'avance. Le tout sous la contrainte de vitesse maximale du drone. La probabilité de réception d'un GT est difficile à évaluer car c'est fonction compliquée de la trajectoire du drone. Pour contourner le problème, les auteurs reformulent le problème en introduisant un paramètre auxiliaire D (distance critique horizontale entre le drone et la GT). Au delà de cette distance D, le nombre de paquets perdus devient trop important car le temps de connexion devient insuffisant. 
 
-\comment{GH: idem, beaucoup, beaucoup de texte\dots}
+%\comment{GH: idem, beaucoup, beaucoup de texte\dots}
+
+\begin{itemize}
+	\item Objectif : Minimiser le temps de mission total T
+	\item En assurant une bonne réception des paquets avec une probabilité suffisante
+	\item Sous la contrainte de vitesse max Vmax du drone 
+\end{itemize}
 
 \end{frame}
 
