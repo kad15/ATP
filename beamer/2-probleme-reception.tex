@@ -1,4 +1,4 @@
-\section{Modélisation du problème et réception}
+\section{Modélisation du problème: réception}
 
 \subsection[Modèle initial]{Formulation et modélisation initiale du problème}
 \begin{frame}{Formulation initiale}
@@ -19,11 +19,11 @@
   \begin{block}{Discrétisation}
     \[ T = M \delta_t \]
     \note[item]{\( T \) horizon de la mission}
-    \note[item]{\( M \) pas de temps final}
+    \note[item]{\( M \) nombre de pas de temps}
     \note[item]{\( \delta_t \) durée d'un pas de temps}
     \begin{equation}
       \min \text{\textit{temps d'exécution de la mission}}
-      \longleftrightarrow \min_M M
+      \longleftrightarrow \min M
     \end{equation}
   \end{block}
   \begin{block}{Position et vitesse}
@@ -34,7 +34,7 @@
       V_{\text{max}} \)
     \end{itemize}
     \begin{equation}
-      \text{\textit{UAV restreint à}} V_{\text{max}} \longleftrightarrow
+      \text{\textit{UAV restreint à} } V_{\text{max}} \longleftrightarrow
       \forall m, \| q[m] - q[m - 1] \| \leq \tilde{V}_{\text{max}}
     \end{equation}
   \end{block}
@@ -64,28 +64,39 @@
       & \min_{q[m]_{m=1}^M, M} M \tag{P1} \label{eq:init-obj} \\
       \text{s.t. } & \forall k \in \mathcal{K}, P_{k, \text{succ}}
       \geq \bar{P} \label{eq:init-prec} \\
-      & \forall m \in \llbracket 1, M \rrbracket, \| q[m] - q[m - 1]
+      & \forall m \in \llbracket 2, M \rrbracket, \| q[m] - q[m - 1]
       \| \leq \tilde{V}_{\text{max}}
   \end{align}
 \end{frame}
 
 \subsection{Minoration de la probabilité de succès}
 \begin{frame}{Minoration de \( P_{k, \text{succ}} \)}
+  \note[item]{On cherche une expression simple d'un minorant de \(
+    P_{k, succ} \) }
   \begin{alertblock}{Problème}
     \( P_{k, \text{succ}} \) dépend de \( \mathbf{q} \)
     \note[item]{probabilité de réception diminue quand la distance
       augmente}
   \end{alertblock}
+  \begin{exampleblock}{Minorant}
+    \[ P_{k, \text{succ}} \geq P_{k, \text{lb}} \geq \bar{P} \]
+  \end{exampleblock}
   \begin{block}{Distance caractéristique}
     \[ \| \mathbf{q}[m] - \mathbf{w}_{k} \| > D \implies
       \text{réception impossible} \]
+    \note[item]{Distance caractéristique permet de ``discrétiser''
+      l'espace en deux niveaux, ou bien on se trouve à moins de \( D
+      \) d'un terminal, ou bien le contraire}
   \end{block}
 \end{frame}
 \begin{frame}{Minoration}
-  \( \mathcal{M}_{k, D} = \{ m | \| \mathbf{q}[m] - \mathbf{w}_k \|
+  \( \mathcal{M}_{k, D} = \{ m : \| \mathbf{q}[m] - \mathbf{w}_k \|
   \leq D \} \)
   \note[item]{\( \mathcal{M}_{k, D} \) ensemble des pas de temps
     durant lesquels la transmission est réalisable}
+  \note{Pour minorer, on utilise le fait que partout en \(
+    \mathcal{M}_{k, D} \), la probabilité de réception \( p \) est
+    supérieure à \( p_D \)}
   \begin{block}{Minorant}
     \( \hat{N}_k \) un minorant du nombre de paquets reçus par
     terminal \( k \)

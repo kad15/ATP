@@ -79,7 +79,7 @@ utilisant des relais ou des stations de base terrestres.
 \begin{itemize}
 	\item Objectif : Minimiser le temps de mission total T
 	\item En assurant une bonne réception des paquets avec une probabilité suffisante
-	\item Sous la contrainte de vitesse max Vmax du drone 
+	\item Sous la contrainte de vitesse max \( V_{max} \) du drone 
 \end{itemize}
 
 \end{frame}
@@ -89,33 +89,33 @@ utilisant des relais ou des stations de base terrestres.
 \newcommand{\asuivre}{\setcounter{sauvegardeenumi}{\theenumi}}
 \newcommand{\suite}{\setcounter{enumi}{\thesauvegardeenumi}}
 
-\begin{frame}{Plan suivi par les auteurs}
-
-\begin{enumerate}
-	
-	\item Reformulation du problème en utilisant une seule contrainte
-	de temps minimum de connexion entre le drone et le terminal terrestre.	
-	\item Démonstration du théorème : " la trajectoire optimale
-	peut-être constituée uniquement de segments de droites reliant des
-	waypoints dont la position est optimisée."
-
-	
-\end{enumerate}
-\asuivre
-\end{frame}
-
-\begin{frame}{Plan suivi par les auteurs}
- 
-\begin{enumerate}
-	\suite
-	\item Utilisation du concept de "stations de base virtuelles" (VBS) pour calculer ces waypoints ;  problème qui est en fait un TSP généralisé (NP-Hard).
-
-	\item Optimisation de la vitesse en fonction du temps le long de la trajectoire obtenue
-	en utilisant la programmation linéaire (LP).
-
-\end{enumerate}
-
-\end{frame}
+% \begin{frame}{Plan suivi par les auteurs}
+% 
+% \begin{enumerate}
+% 	
+% 	\item Reformulation du problème en utilisant une seule contrainte
+% 	de temps minimum de connexion entre le drone et le terminal terrestre.	
+% 	\item Démonstration du théorème : ``la trajectoire optimale
+% 	peut-être constituée uniquement de segments de droites reliant des
+% 	waypoints dont la position est optimisée.''
+% 
+% 	
+% \end{enumerate}
+% \asuivre
+% \end{frame}
+% 
+% \begin{frame}{Plan suivi par les auteurs}
+%  
+% \begin{enumerate}
+% 	\suite
+% 	\item Utilisation du concept de "stations de base virtuelles" (VBS) pour calculer ces waypoints ;  problème qui est en fait un TSP généralisé (NP-Hard).
+% 
+% 	\item Optimisation de la vitesse en fonction du temps le long de la trajectoire obtenue
+% 	en utilisant la programmation linéaire (LP).
+% 
+% \end{enumerate}
+% 
+% \end{frame}
 
 
 \begin{frame}{Plan}
