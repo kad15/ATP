@@ -3,11 +3,13 @@
 
 \begin{frame} {Résumé}
 
-Cet article a donc présenté une solution au problème de conception
-de trajectoire d'un drone équipés de système de communication sans fil
-en vu de transmettre un fichier à un ensemble de récepteurs i.e. Terminaux Terrestres. 
-La mission doit être accomplie en un temps minimum tout en assurant une bonne réception
-du message avec une probabilité minimale.
+Cet article a donc présenté 
+\begin{itemize}
+	\item un cas d'optimisation de trajectoire 4D
+	\item contraint par la vitesse maximale du drone
+	\item et par le temps minimum de connexion nécessaire à bonne réception du message. 
+\end{itemize}
+
 
 \end{frame}
 
@@ -67,10 +69,13 @@ Pour ce faire, plusieurs étapes ont été nécessaires
 
 \begin{frame} {Perspectives}
 
-Dans les systèmes multicast, on peut utiliser un processus de partage de fichiers,
-dit device to device (D2D), durant lequel les terminaux terrestres
-s'échangent des paquets reçus pendant la phase multicast pour reconstituer leurs messages
-respectifs dans leur totalité. 
+\begin{enumerate}
+	\item Phase multicast de transmission de paquets
+	\item Phase device to device (D2D) : les terminaux s'échangent des paquets pour reconstituer le message dans leur totalité. 
+
+\end{enumerate}
+
+
 
 % \begin{figure}[t]
 %	\centering
@@ -80,7 +85,7 @@ respectifs dans leur totalité.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{d2d}
+	\includegraphics[width=1\linewidth]{d2d}
 %	\caption{}
 	\label{fig:d2d}
 \end{figure}
@@ -89,12 +94,12 @@ respectifs dans leur totalité.
 \end{frame}
 
 
-\begin{frame} {}
-
-Cet article n'a pris en compte que la phase multicast. L'étude conjointe
-des deux phases multicast et D2D serait probablement intéressante à entreprendre.
-En lien avec des techniques de clustering pour les stations sol, l'optimisation
-conjointe pourrait permettre de réduire davantage les coûts de transmission et donc la taille des drones
-utilisés.
-
-\end{frame}
+%\begin{frame} {}
+%
+%Cet article n'a pris en compte que la phase multicast. L'étude conjointe
+%des deux phases multicast et D2D serait probablement intéressante à entreprendre.
+%En lien avec des techniques de clustering pour les stations sol, l'optimisation
+%conjointe pourrait permettre de réduire davantage les coûts de transmission et donc la taille des drones
+%utilisés.
+%
+%\end{frame}
